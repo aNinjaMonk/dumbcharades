@@ -7,6 +7,7 @@ import {
 } from 'react-native';
 import { LoginButton, AccessToken } from 'react-native-fbsdk';
 import * as api from '../Api';
+import MOVIES from '../Store/Movies.json';
 import { Colors, Metrics, Images, ApplicationStyles, Fonts } from '../Themes';
 const navigatorStyle = {
   navBarHidden: true,
@@ -73,7 +74,8 @@ export default class App extends Component<{}> {
       screen: 'home',
       navigatorStyle,
       passProps: {
-        user: this.state.user
+        user: this.state.user,
+        movie: MOVIES[Math.floor(Math.random() * MOVIES.length)]
       }
     });
   }

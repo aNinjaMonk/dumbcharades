@@ -15,6 +15,7 @@
      super(props);
 
      this.startApp();
+     console.ignoredYellowBox = ['Setting a timer'];
    }
    startApp() {
      Navigation.startSingleScreenApp({
